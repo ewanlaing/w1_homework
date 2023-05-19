@@ -1,3 +1,4 @@
+
 # WRITE YOUR FUNCTIONS HERE
 def get_pet_shop_name(pet_shop):
     return pet_shop["name"]
@@ -13,3 +14,8 @@ def get_pets_sold(pet_shop):
 
 def increase_pets_sold(pet_shop, number_of_pets):
     pet_shop["admin"]["pets_sold"] += number_of_pets
+
+def find_pet_by_name(pet_shop, pet_name):
+    for pet in pet_shop["pets"]:
+        if pet["name"] == pet_name:
+            return pet
